@@ -1,0 +1,121 @@
+{
+	"name": "Interface",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player UI",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Stamina bar",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Create and setup stamina bar and sub elements"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 668022471227554
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 368978381638900,
+									"parameters": {
+										"object-to-create": "ui_staminaBar",
+										"layer": "2",
+										"x": "ViewportWidth(0) / 8 * LayoutScale",
+										"y": "ViewportHeight(0) / 3 +  10 * LayoutScale",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "ui_staminaBar_background",
+									"sid": 115195004486744
+								},
+								{
+									"id": "set-width",
+									"objectClass": "ui_staminaBar",
+									"sid": 796222423715530,
+									"parameters": {
+										"width": "Self.Width * 5"
+									}
+								},
+								{
+									"id": "set-size",
+									"objectClass": "ui_staminaBar_background",
+									"sid": 500331682893878,
+									"parameters": {
+										"width": "ui_staminaBar.Width  + 2",
+										"height": "ui_staminaBar.Height * 1.1"
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "ui_staminaBar_background",
+									"sid": 255534059450650,
+									"parameters": {
+										"object": "ui_staminaBar",
+										"image-point-optional": "1"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Set values"
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "ui_staminaBar",
+									"sid": 496268340625380,
+									"parameters": {
+										"instance-variable": "val_originalWidth",
+										"value": "Self.Width"
+									}
+								}
+							],
+							"sid": 490092353966418
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 168890468640645
+								}
+							],
+							"actions": [
+								{
+									"id": "set-width",
+									"objectClass": "ui_staminaBar",
+									"sid": 815641806245377,
+									"parameters": {
+										"width": "manager_control.val_currentStamina / manager_control.val_maxStamina * Self.val_originalWidth"
+									}
+								}
+							],
+							"sid": 969297012108107
+						}
+					],
+					"sid": 223686220099557
+				}
+			],
+			"sid": 392743004952728
+		}
+	],
+	"sid": 992670266149864
+}

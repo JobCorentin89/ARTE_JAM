@@ -1,0 +1,135 @@
+{
+	"name": "manager_control",
+	"plugin-id": "Sprite",
+	"sid": 107497727994210,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "val_inputX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 638340379953887
+		},
+		{
+			"name": "val_inputY",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 323859822892371
+		},
+		{
+			"name": "val_currentStamina",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 902626101717263
+		},
+		{
+			"name": "val_maxStamina",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 264677164123984
+		},
+		{
+			"name": "bool_sprintAction",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 112727553390984
+		},
+		{
+			"name": "val_defaultSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 472062928292578
+		},
+		{
+			"name": "val_sprintSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 868793845923712
+		},
+		{
+			"name": "bool_staminaRegain",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 765508324155326
+		},
+		{
+			"name": "val_dashSpeed",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 288835386287683
+		},
+		{
+			"name": "bool_dashAction",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 248842564647916
+		},
+		{
+			"name": "val_playerOriginWidth",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 642509751680903
+		},
+		{
+			"name": "val_playerOriginHeight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 607922488083563
+		},
+		{
+			"name": "bool_light_attack",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 252859755984973
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 955868897244872
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7376121,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 461339235808880,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

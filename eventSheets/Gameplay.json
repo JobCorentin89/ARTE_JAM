@@ -1,0 +1,18 @@
+{
+	"name": "Gameplay",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Camera"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "CharacterController"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Interface"
+		}
+	],
+	"sid": 804617850362416
+}
