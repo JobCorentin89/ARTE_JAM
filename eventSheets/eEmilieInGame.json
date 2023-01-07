@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "CountdownBobby",
 			"type": "number",
-			"initialValue": "15",
+			"initialValue": "60",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -43,89 +43,53 @@
 		},
 		{
 			"eventType": "variable",
-			"name": "randomRightEyebrow",
+			"name": "randomGlasses",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 826317777886026
+			"sid": 937153610078373
 		},
 		{
-			"eventType": "variable",
-			"name": "randomLeftEyebrow",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 555661425429635
-		},
-		{
-			"eventType": "variable",
-			"name": "randomRightEye",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 587976294826112
-		},
-		{
-			"eventType": "variable",
-			"name": "randomLeftEye",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 746567119583063
-		},
-		{
-			"eventType": "variable",
-			"name": "randomNose",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 210259247079551
-		},
-		{
-			"eventType": "variable",
-			"name": "randomMouth",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 277596426852835
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "KeyboardBobby",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-key-released",
-					"objectClass": "Keyboard",
-					"sid": 879464955948415,
-					"parameters": {
-						"key": 82
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "reset-global-variables",
-					"objectClass": "System",
-					"sid": 742878072409958
+					"eventType": "comment",
+					"text": "Le Cheat Code du random"
 				},
 				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 491248986338474
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 154102495694671,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 973256471576946
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 407628068133036
+						}
+					],
+					"sid": 251829914617425
 				}
 			],
-			"sid": 283443957647642
+			"sid": 400006583276053
 		},
 		{
 			"eventType": "group",
@@ -136,7 +100,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "Countdown par tranche de X secondes"
+					"text": "En début de partie : Afficher un countdown de X secondes et afficher une contrainte au hasard"
 				},
 				{
 					"eventType": "block",
@@ -174,25 +138,29 @@
 					"sid": 988057590774965
 				},
 				{
+					"eventType": "comment",
+					"text": "Changer de contrainte toutes les X secondes"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
 							"id": "every-tick",
 							"objectClass": "System",
-							"sid": 501954214779367
+							"sid": 225635807959060
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
 							"objectClass": "TextCountdown",
-							"sid": 753279086608367,
+							"sid": 460564021303081,
 							"parameters": {
 								"text": "CountdownBobby"
 							}
 						}
 					],
-					"sid": 302411848483539
+					"sid": 814491664817289
 				},
 				{
 					"eventType": "block",
@@ -200,7 +168,7 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 230916062293829,
+							"sid": 821710698246453,
 							"parameters": {
 								"interval-seconds": "1.0"
 							}
@@ -210,14 +178,14 @@
 						{
 							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 369437566902476,
+							"sid": 962418450469268,
 							"parameters": {
 								"variable": "CountdownBobby",
 								"value": "1"
 							}
 						}
 					],
-					"sid": 342568401112020
+					"sid": 362914591495356
 				},
 				{
 					"eventType": "block",
@@ -225,9 +193,9 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 483555680304096,
+							"sid": 317221309221908,
 							"parameters": {
-								"interval-seconds": "15"
+								"interval-seconds": "60"
 							}
 						}
 					],
@@ -235,10 +203,19 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 308465060175099,
+							"sid": 717041459073130,
 							"parameters": {
 								"variable": "CountdownBobby",
-								"value": "15"
+								"value": "60"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 744511137401834,
+							"parameters": {
+								"variable": "randomConstraint",
+								"value": "floor(random(4))"
 							}
 						}
 					],
@@ -246,7 +223,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Contrainte random en début de partie"
+					"text": "Faire apparaître une contrainte random entre plusieurs propositions sans que jamais deux même contraintes se suivent"
 				},
 				{
 					"eventType": "block",
@@ -260,13 +237,23 @@
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "TextContrainte",
+							"sid": 865461003706055,
+							"parameters": {
+								"text-to-compare": "\"Faites rimer vos phrases\"",
+								"case-sensitivity": "ignore-case"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
 							"objectClass": "TextContrainte",
-							"sid": 700424734762407,
+							"sid": 387726108187391,
 							"parameters": {
 								"text": "\"Faites rimer vos phrases\""
 							}
@@ -280,19 +267,29 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 663293564775149,
+							"sid": 373240561512837,
 							"parameters": {
 								"variable": "randomConstraint",
 								"comparison": 0,
 								"value": "1"
 							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "TextContrainte",
+							"sid": 502444875714735,
+							"parameters": {
+								"text-to-compare": "\"Mimez ce que vous voyez\"",
+								"case-sensitivity": "ignore-case"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
 							"objectClass": "TextContrainte",
-							"sid": 687554668721689,
+							"sid": 924256956689529,
 							"parameters": {
 								"text": "\"Mimez ce que vous voyez\""
 							}
@@ -312,13 +309,23 @@
 								"comparison": 0,
 								"value": "2"
 							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "TextContrainte",
+							"sid": 752299433947090,
+							"parameters": {
+								"text-to-compare": "\"Parlez uniquement en verlan\"",
+								"case-sensitivity": "ignore-case"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
 							"objectClass": "TextContrainte",
-							"sid": 138137802744343,
+							"sid": 665375521646343,
 							"parameters": {
 								"text": "\"Parlez uniquement en verlan\""
 							}
@@ -338,13 +345,23 @@
 								"comparison": 0,
 								"value": "3"
 							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "TextContrainte",
+							"sid": 429298454588228,
+							"parameters": {
+								"text-to-compare": "\"N'appelez pas les éléments par leur nom\"",
+								"case-sensitivity": "ignore-case"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
 						{
 							"id": "set-text",
 							"objectClass": "TextContrainte",
-							"sid": 661148140972090,
+							"sid": 237485751799986,
 							"parameters": {
 								"text": "\"N'appelez pas les éléments par leur nom\""
 							}
@@ -397,11 +414,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 881873015494009,
+							"sid": 132149695066929,
 							"parameters": {
 								"variable": "TimerBobby",
 								"comparison": 0,
-								"value": "60"
+								"value": "180"
 							}
 						}
 					],
@@ -428,6 +445,10 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "comment",
+					"text": "Randomiser l'affichage des assets"
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -438,9 +459,27 @@
 					],
 					"actions": [
 						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 689094038446006,
+							"parameters": {
+								"variable": "randomHat",
+								"value": "floor(random(2))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 515495817243197,
+							"parameters": {
+								"variable": "randomGlasses",
+								"value": "floor(random(5))"
+							}
+						},
+						{
 							"id": "set-animation",
-							"objectClass": "BobbyMouth",
-							"sid": 100813352399236,
+							"objectClass": "BobbyFace",
+							"sid": 392252773183853,
 							"parameters": {
 								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\")",
 								"from": "beginning"
@@ -448,37 +487,55 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "BobbyHatRight",
-							"sid": 125231042073056,
+							"objectClass": "BobbyMouth",
+							"sid": 419164799947528,
 							"parameters": {
-								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\",\"Animation 7\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyNose",
+							"sid": 303686604865907,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyHatRight",
+							"sid": 272048686802004,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\")",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-animation",
 							"objectClass": "BobbyHatLeft",
-							"sid": 119875641591133,
+							"sid": 353443041963164,
 							"parameters": {
-								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\")",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-animation",
 							"objectClass": "BobbyEyeRight",
-							"sid": 420897544252258,
+							"sid": 318763102767000,
 							"parameters": {
-								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\",\"Animation 7\")",
 								"from": "beginning"
 							}
 						},
 						{
 							"id": "set-animation",
 							"objectClass": "BobbyEyeLeft",
-							"sid": 871095436534077,
+							"sid": 108800418435149,
 							"parameters": {
-								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\",\"Animation 7\")",
 								"from": "beginning"
 							}
 						},
@@ -499,18 +556,170 @@
 								"animation": "choose(\"Animation 1\",\"Animation 2\")",
 								"from": "beginning"
 							}
-						},
-						{
-							"id": "set-animation",
-							"objectClass": "BobbyNose",
-							"sid": 434452495803255,
-							"parameters": {
-								"animation": "choose(\"Animation 1\",\"Animation 2\")",
-								"from": "beginning"
-							}
 						}
 					],
 					"sid": 884322308846109
+				},
+				{
+					"eventType": "comment",
+					"text": "Empêcher deux assets de type \"Hat\" de s'afficher en même temps"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 578186321427019,
+							"parameters": {
+								"variable": "randomHat",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyHatRight",
+							"sid": 872461714658564,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyHatLeft",
+							"sid": 661509113546397,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 836050625400052
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 818014005116436,
+							"parameters": {
+								"variable": "randomHat",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyHatLeft",
+							"sid": 580821242297966,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyHatRight",
+							"sid": 304566326078924,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 809006343999713
+				},
+				{
+					"eventType": "comment",
+					"text": "Empêcher les assets de type \"Eyes\" de s'afficher en même temps que les \"Glasses\""
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 947224667547355,
+							"parameters": {
+								"variable": "randomGlasses",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyEyeLeft",
+							"sid": 536125532874388,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyEyeRight",
+							"sid": 331579673102460,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyGlasses",
+							"sid": 324631581892525,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 851262656915629
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 628196064506266,
+							"parameters": {
+								"variable": "randomGlasses",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyEyeLeft",
+							"sid": 235878500730547,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyEyeRight",
+							"sid": 554695621306162,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BobbyGlasses",
+							"sid": 425787446359082,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 712298195754899,
+					"isOrBlock": true
 				}
 			],
 			"sid": 410485760848870

@@ -2,16 +2,6 @@
 	"name": "eEmilieMainMenu",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "VariableMobileOrPC",
-			"type": "boolean",
-			"initialValue": "true",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 113472691636155
-		},
-		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "START_MENU",
@@ -84,24 +74,6 @@
 						}
 					],
 					"sid": 675597082403669,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 874321526836269,
-									"parameters": {
-										"variable": "VariableMobileOrPC",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 887555850682531
-						}
-					],
 					"isOrBlock": true
 				},
 				{
@@ -139,24 +111,6 @@
 						}
 					],
 					"sid": 346014747677621,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 229222983635238,
-									"parameters": {
-										"variable": "VariableMobileOrPC",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 648973077228847
-						}
-					],
 					"isOrBlock": true
 				}
 			],
@@ -203,7 +157,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "BoutonBobby",
+							"objectClass": "BoutonFred",
 							"sid": 114296791411946,
 							"parameters": {
 								"animation": "\"Off\"",
@@ -216,6 +170,22 @@
 							"sid": 675596885178796,
 							"parameters": {
 								"cursor-style": "normal"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonBOBBY",
+							"sid": 201742616052838,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonFRED",
+							"sid": 299147020668682,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
 							}
 						}
 					],
@@ -249,6 +219,14 @@
 							"sid": 881046427588418,
 							"parameters": {
 								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonBOBBY",
+							"sid": 437354184007553,
+							"parameters": {
+								"color": "rgbEx(250, 250, 250)"
 							}
 						}
 					],
@@ -308,6 +286,14 @@
 							"sid": 321108577866475,
 							"parameters": {
 								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonFRED",
+							"sid": 132367445596629,
+							"parameters": {
+								"color": "rgbEx(250, 250, 250)"
 							}
 						}
 					],
@@ -389,6 +375,22 @@
 								"animation": "\"Off\"",
 								"from": "beginning"
 							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonBOBBY",
+							"sid": 153949898483252,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonFRED",
+							"sid": 263565555260786,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
 						}
 					],
 					"sid": 548263264990442
@@ -413,6 +415,14 @@
 							"parameters": {
 								"animation": "\"On\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonBOBBY",
+							"sid": 338743431942387,
+							"parameters": {
+								"color": "rgbEx(250, 250, 250)"
 							}
 						}
 					],
@@ -464,6 +474,14 @@
 							"parameters": {
 								"animation": "\"On\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonFRED",
+							"sid": 669972787757712,
+							"parameters": {
+								"color": "rgbEx(250, 250, 250)"
 							}
 						}
 					],

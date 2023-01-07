@@ -2,47 +2,94 @@
 	"name": "EmilieEND",
 	"layers": [
 		{
+			"name": "Background",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "BobbyBackground",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 32,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 1920,
+						"height": 1080,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 775847936534561,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Calque 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "BobbyMouth",
+					"type": "BoutonRetry",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Off",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 16,
+					"uid": 33,
 					"instanceVariables": {},
-					"behaviors": {
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"BetterOutline": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									0,
-									0,
-									0,
-									1
-								],
-								"width": 5,
-								"precision-step": 1,
-								"samples": 16
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
-						"x": 1274,
-						"y": 599,
-						"width": 166,
-						"height": 76,
+						"x": 960,
+						"y": 871,
+						"width": 518.9150066188853,
+						"height": 190.40963924775627,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -56,9 +103,9 @@
 					}
 				},
 				{
-					"type": "TextContrainte",
+					"type": "TextBoutonRetry",
 					"properties": {
-						"text": "Scène Bobby END",
+						"text": "RETRY",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 72,
@@ -71,19 +118,19 @@
 							0,
 							1
 						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left"
 					},
-					"uid": 17,
+					"uid": 34,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 498,
-						"y": 161,
-						"width": 925,
+						"x": 3,
+						"y": 809,
+						"width": 1914,
 						"height": 142,
 						"originX": 0,
 						"originY": 0,
@@ -114,7 +161,7 @@
 				0.3686274509803922,
 				1
 			],
-			"isTransparent": false,
+			"isTransparent": true,
 			"parallaxX": 1,
 			"parallaxY": 1,
 			"scaleRate": 1,
@@ -136,5 +183,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "eEmilieInGame"
+	"eventSheet": "eEmilieEND"
 }

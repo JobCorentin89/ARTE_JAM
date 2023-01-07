@@ -48,6 +48,14 @@
 		},
 		{
 			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
@@ -64,16 +72,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"id": "Timer",
+			"name": "Timer",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Timer",
-			"name": "Timer",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -114,7 +122,6 @@
 			},
 			{
 				"items": [
-					"MimiTest1",
 					"BobbyMouth",
 					"PlatformInfo",
 					"TextContrainte",
@@ -131,7 +138,16 @@
 					"BobbyEyeLeft",
 					"BobbyEyeRight",
 					"BobbyHatRight",
-					"BobbyNose"
+					"BobbyNose",
+					"BobbyBack_mirror",
+					"BobbyDirt_Mirror",
+					"BobbyFace",
+					"BobbyFrame",
+					"BobbyMirror_Shade",
+					"BobbyBackground",
+					"BobbyGlasses",
+					"BoutonRetry",
+					"TextBoutonRetry"
 				],
 				"subfolders": [],
 				"name": "Emilie_assets"
@@ -162,7 +178,8 @@
 			"eMain",
 			"eCorentin",
 			"eEmilieInGame",
-			"eEmilieMainMenu"
+			"eEmilieMainMenu",
+			"eEmilieEND"
 		],
 		"subfolders": []
 	},

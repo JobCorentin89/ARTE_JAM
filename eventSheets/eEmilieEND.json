@@ -1,0 +1,334 @@
+{
+	"name": "eEmilieEND",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "END_MENU",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 362802946055441
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonRetry",
+							"sid": 597534519952322,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 928668858279195
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-android",
+							"objectClass": "PlatformInfo",
+							"sid": 604904204926952
+						},
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 133653794308473
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 363277476913001,
+							"parameters": {
+								"group-name": "\"RETRY_MOBILE\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 205316059940425,
+							"parameters": {
+								"group-name": "\"RETRY_PC\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 688681796144753,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-web-export",
+							"objectClass": "PlatformInfo",
+							"sid": 943256830697916
+						},
+						{
+							"id": "is-nwjs-export",
+							"objectClass": "PlatformInfo",
+							"sid": 105015544046344
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 128340354152454,
+							"parameters": {
+								"group-name": "\"RETRY_PC\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 230376569266708,
+							"parameters": {
+								"group-name": "\"RETRY_MOBILE\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 825493177769072,
+					"isOrBlock": true
+				}
+			],
+			"sid": 797954486812857
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RETRY_PC",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 256966657765068,
+							"parameters": {
+								"object": "BoutonRetry"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonRetry",
+							"sid": 638525471262970,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Souris",
+							"sid": 646021392992838,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonRetry",
+							"sid": 392770914325245,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
+						}
+					],
+					"sid": 272432852450403
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 628056543242341,
+							"parameters": {
+								"object": "BoutonRetry"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonRetry",
+							"sid": 302195630980536,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Souris",
+							"sid": 630558689125267,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonRetry",
+							"sid": 481734284430580,
+							"parameters": {
+								"color": "rgbEx(250, 250, 250)"
+							}
+						}
+					],
+					"sid": 249536420304168,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Souris",
+									"sid": 533163347760968,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 273340518184270,
+									"parameters": {
+										"layout": "EmilieMainMenu"
+									}
+								}
+							],
+							"sid": 122910241142184
+						}
+					]
+				}
+			],
+			"sid": 430162821065401
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RETRY_MOBILE",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Toucher",
+							"sid": 701430587790109,
+							"parameters": {
+								"object": "BoutonRetry"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonRetry",
+							"sid": 610737472263237,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonRetry",
+							"sid": 485410750618073,
+							"parameters": {
+								"color": "rgbEx(0, 0, 0)"
+							}
+						}
+					],
+					"sid": 277333431100185
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Toucher",
+							"sid": 420429607482244,
+							"parameters": {
+								"object": "BoutonRetry"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonRetry",
+							"sid": 558876142264190,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "TextBoutonRetry",
+							"sid": 409176796392464,
+							"parameters": {
+								"color": "rgbEx(250, 250, 250)"
+							}
+						}
+					],
+					"sid": 396014154667204,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Toucher",
+									"sid": 942396791421385,
+									"parameters": {
+										"object": "BoutonRetry"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 464124752146574,
+									"parameters": {
+										"layout": "EmilieMainMenu"
+									}
+								}
+							],
+							"sid": 565258857432068
+						}
+					]
+				}
+			],
+			"sid": 720598279142981
+		}
+	],
+	"sid": 698219021965163
+}

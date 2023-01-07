@@ -1,41 +1,30 @@
 {
-	"name": "MimiTest1",
+	"name": "BobbyDirt_Mirror",
 	"plugin-id": "Sprite",
-	"sid": 442826466152932,
+	"sid": 972490338039382,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "DragnDrop",
-			"name": "DragDrop",
-			"sid": 741050875998678
-		}
-	],
-	"effectTypes": [
-		{
-			"effectId": "skymen_BetterOutline",
-			"name": "BetterOutline"
-		}
-	],
+	"behaviorTypes": [],
+	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 615,
+						"height": 695,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9532733,
+						"imageSpriteId": 8639187,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 245754891602084,
-				"name": "Animation 1",
+				"sid": 489097188812378,
+				"name": "Default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
