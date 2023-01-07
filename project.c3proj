@@ -192,7 +192,7 @@
 		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders"
 	},
-	"viewportWidth": 1600,
-	"viewportHeight": 900,
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
 	"firstLayout": null
 }
