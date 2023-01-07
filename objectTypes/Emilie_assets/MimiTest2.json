@@ -1,11 +1,22 @@
 {
-	"name": "Sprite2",
+	"name": "MimiTest2",
 	"plugin-id": "Sprite",
 	"sid": 431846243782106,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
-	"effectTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 662133071224067
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
 	"animations": {
 		"items": [
 			{
@@ -18,7 +29,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2581842,
+						"imageSpriteId": 5347264,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

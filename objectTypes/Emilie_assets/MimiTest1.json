@@ -1,11 +1,22 @@
 {
-	"name": "Sprite",
+	"name": "MimiTest1",
 	"plugin-id": "Sprite",
 	"sid": 442826466152932,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
-	"effectTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 741050875998678
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
 	"animations": {
 		"items": [
 			{

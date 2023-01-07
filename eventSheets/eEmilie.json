@@ -1,5 +1,188 @@
 {
 	"name": "eEmilie",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "VariableEmilieScene",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 317101277483139
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 692206735272797
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "START",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 291399136755715
+						},
+						{
+							"id": "is-on-android",
+							"objectClass": "PlatformInfo",
+							"sid": 124604151206762
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 422759666170195,
+							"parameters": {
+								"variable": "VariableEmilieScene"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 304606515981652,
+							"parameters": {
+								"layout": "EmilieMenu"
+							}
+						}
+					],
+					"sid": 319058688761021,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 842900727238202,
+									"parameters": {
+										"variable": "VariableEmilieScene",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 637222587033142
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 835206223916838
+						},
+						{
+							"id": "is-web-export",
+							"objectClass": "PlatformInfo",
+							"sid": 792323158810483
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 483556234058451,
+							"parameters": {
+								"layout": "corentin"
+							}
+						}
+					],
+					"sid": 958799369675704
+				}
+			],
+			"sid": 722251986931704
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TOUCH",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Toucher",
+							"sid": 420424044791375,
+							"parameters": {
+								"object": "MimiTest1"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 229311062633133,
+							"disabled": true,
+							"parameters": {
+								"variable": "VariableEmilieScene"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 167819020099513,
+							"parameters": {
+								"layout": "EmilieScene"
+							}
+						}
+					],
+					"sid": 459392453707448
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Toucher",
+							"sid": 714141385447167,
+							"parameters": {
+								"object": "MimiTest2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 803015733507216,
+							"disabled": true,
+							"parameters": {
+								"variable": "VariableEmilieScene"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 151229185606222,
+							"parameters": {
+								"layout": "EmilieMenu"
+							}
+						}
+					],
+					"sid": 152720417472966
+				}
+			],
+			"sid": 725311412485434
+		}
+	],
 	"sid": 499569445509790
 }
