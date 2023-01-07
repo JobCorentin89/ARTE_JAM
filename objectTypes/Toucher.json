@@ -1,0 +1,12 @@
+{
+	"name": "Toucher",
+	"plugin-id": "Touch",
+	"sid": 248505430980300,
+	"singleglobal-inst": {
+		"type": "Toucher",
+		"properties": {
+			"use-mouse-input": true
+		},
+		"uid": 5
+	}
+}

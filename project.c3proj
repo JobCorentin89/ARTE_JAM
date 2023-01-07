@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Toucher",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Glisser déposer",
@@ -51,7 +59,8 @@
 	"objectTypes": {
 		"items": [
 			"Audio",
-			"Souris"
+			"Souris",
+			"Toucher"
 		],
 		"subfolders": [
 			{
@@ -60,6 +69,11 @@
 				],
 				"subfolders": [],
 				"name": "Corentin_assets"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Emilie_assets"
 			}
 		]
 	},
