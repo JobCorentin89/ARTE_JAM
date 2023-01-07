@@ -1,0 +1,100 @@
+{
+	"name": "BoutonBobby",
+	"plugin-id": "Sprite",
+	"sid": 247762432012924,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1597,
+						"height": 586,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9124209,
+						"collisionPoly": {
+							"points": [
+								0.06011271133375078,
+								0.16382252559726962,
+								0.5,
+								0,
+								0.9423919849718222,
+								0.1552901023890785,
+								0.9993738259236068,
+								0.5,
+								0.9423919849718222,
+								0.8430034129692833,
+								0.5,
+								0.9982935153583617,
+								0.06011271133375078,
+								0.8344709897610921,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 871444507118668,
+				"name": "Off",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 1597,
+						"height": 586,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4271688,
+						"collisionPoly": {
+							"points": [
+								0.06011271133375078,
+								0.16382252559726962,
+								0.5,
+								0,
+								0.9423919849718222,
+								0.1552901023890785,
+								0.9993738259236068,
+								0.5,
+								0.9423919849718222,
+								0.8430034129692833,
+								0.5,
+								0.9982935153583617,
+								0.06011271133375078,
+								0.8344709897610921,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 689373865376573,
+				"name": "On",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

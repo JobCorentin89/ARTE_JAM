@@ -1,5 +1,5 @@
 {
-	"name": "EmilieMenu",
+	"name": "EmilieEND",
 	"layers": [
 		{
 			"name": "Calque 0",
@@ -7,7 +7,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "MimiTest1",
+					"type": "BobbyMouth",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -15,14 +15,11 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 10,
+					"uid": 16,
 					"instanceVariables": {},
 					"behaviors": {
-						"DragDrop": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"effects": {
@@ -42,10 +39,10 @@
 						}
 					},
 					"world": {
-						"x": 574,
-						"y": 571,
-						"width": 250,
-						"height": 250,
+						"x": 1274,
+						"y": 599,
+						"width": 166,
+						"height": 76,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -59,9 +56,9 @@
 					}
 				},
 				{
-					"type": "TextTéléphone",
+					"type": "TextContrainte",
 					"properties": {
-						"text": "Menu Téléphone",
+						"text": "Scène Bobby END",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 72,
@@ -80,12 +77,12 @@
 						"initially-visible": true,
 						"origin": "top-left"
 					},
-					"uid": 8,
+					"uid": 17,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 556,
-						"y": 115,
+						"x": 498,
+						"y": 161,
 						"width": 925,
 						"height": 142,
 						"originX": 0,
@@ -101,7 +98,7 @@
 					}
 				}
 			],
-			"sid": 590145325324224,
+			"sid": 872381778345150,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -130,7 +127,7 @@
 			"global": false
 		}
 	],
-	"sid": 676000282616270,
+	"sid": 644887002854036,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1920,
@@ -139,5 +136,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "eEmilie"
+	"eventSheet": "eEmilieInGame"
 }

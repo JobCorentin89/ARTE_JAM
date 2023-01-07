@@ -1,0 +1,520 @@
+{
+	"name": "eEmilieInGame",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CountdownBobby",
+			"type": "number",
+			"initialValue": "15",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 244432758173651
+		},
+		{
+			"eventType": "variable",
+			"name": "TimerBobby",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 530501052955993
+		},
+		{
+			"eventType": "variable",
+			"name": "randomConstraint",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 148369230481584
+		},
+		{
+			"eventType": "variable",
+			"name": "randomHat",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 393978705155093
+		},
+		{
+			"eventType": "variable",
+			"name": "randomRightEyebrow",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 826317777886026
+		},
+		{
+			"eventType": "variable",
+			"name": "randomLeftEyebrow",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 555661425429635
+		},
+		{
+			"eventType": "variable",
+			"name": "randomRightEye",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 587976294826112
+		},
+		{
+			"eventType": "variable",
+			"name": "randomLeftEye",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 746567119583063
+		},
+		{
+			"eventType": "variable",
+			"name": "randomNose",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 210259247079551
+		},
+		{
+			"eventType": "variable",
+			"name": "randomMouth",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 277596426852835
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-released",
+					"objectClass": "Keyboard",
+					"sid": 879464955948415,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 742878072409958
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 491248986338474
+				}
+			],
+			"sid": 283443957647642
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "CountdownBobby",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Countdown par tranche de X secondes"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 247744216126848
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 244720045364741
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TextCountdown",
+							"sid": 825222578208038,
+							"parameters": {
+								"text": "CountdownBobby"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 699188302677479,
+							"parameters": {
+								"variable": "randomConstraint",
+								"value": "floor(random(4))"
+							}
+						}
+					],
+					"sid": 988057590774965
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 501954214779367
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextCountdown",
+							"sid": 753279086608367,
+							"parameters": {
+								"text": "CountdownBobby"
+							}
+						}
+					],
+					"sid": 302411848483539
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 230916062293829,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 369437566902476,
+							"parameters": {
+								"variable": "CountdownBobby",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 342568401112020
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 483555680304096,
+							"parameters": {
+								"interval-seconds": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 308465060175099,
+							"parameters": {
+								"variable": "CountdownBobby",
+								"value": "15"
+							}
+						}
+					],
+					"sid": 615587915986668
+				},
+				{
+					"eventType": "comment",
+					"text": "Contrainte random en début de partie"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 521212667698320,
+							"parameters": {
+								"variable": "randomConstraint",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextContrainte",
+							"sid": 700424734762407,
+							"parameters": {
+								"text": "\"Faites rimer vos phrases\""
+							}
+						}
+					],
+					"sid": 302685395395200
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 663293564775149,
+							"parameters": {
+								"variable": "randomConstraint",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextContrainte",
+							"sid": 687554668721689,
+							"parameters": {
+								"text": "\"Mimez ce que vous voyez\""
+							}
+						}
+					],
+					"sid": 432758227365423
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 376954414928907,
+							"parameters": {
+								"variable": "randomConstraint",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextContrainte",
+							"sid": 138137802744343,
+							"parameters": {
+								"text": "\"Parlez uniquement en verlan\""
+							}
+						}
+					],
+					"sid": 611573802449603
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 105685429786375,
+							"parameters": {
+								"variable": "randomConstraint",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TextContrainte",
+							"sid": 661148140972090,
+							"parameters": {
+								"text": "\"N'appelez pas les éléments par leur nom\""
+							}
+						}
+					],
+					"sid": 401016119971348
+				}
+			],
+			"sid": 378852465356921
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "TimerBobby",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Affichage de l'écran de fin après un certain temps"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 283704624110907,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 373562736881097,
+							"parameters": {
+								"variable": "TimerBobby",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 579082008458283
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 881873015494009,
+							"parameters": {
+								"variable": "TimerBobby",
+								"comparison": 0,
+								"value": "60"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 927603805539656,
+							"parameters": {
+								"layout": "EmilieEND"
+							}
+						}
+					],
+					"sid": 573654579141046
+				}
+			],
+			"sid": 911129736948497
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "RandomAssets",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 637765327722306
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyMouth",
+							"sid": 100813352399236,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\",\"Animation 5\",\"Animation 6\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyHatRight",
+							"sid": 125231042073056,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyHatLeft",
+							"sid": 119875641591133,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyEyeRight",
+							"sid": 420897544252258,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyEyeLeft",
+							"sid": 871095436534077,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\",\"Animation 3\",\"Animation 4\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyEyebrowRight",
+							"sid": 232191987776186,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyEyebrowLeft",
+							"sid": 526346847453186,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BobbyNose",
+							"sid": 434452495803255,
+							"parameters": {
+								"animation": "choose(\"Animation 1\",\"Animation 2\")",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 884322308846109
+				}
+			],
+			"sid": 410485760848870
+		}
+	],
+	"sid": 499569445509790
+}

@@ -32,6 +32,22 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
@@ -47,14 +63,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Touch",
-			"name": "Touch",
-			"author": "Scirra",
-			"version": "r317.2",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -64,16 +72,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
+			"id": "Timer",
+			"name": "Timer",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "Timer",
-			"name": "Timer",
+			"id": "Tween",
+			"name": "Tween",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -91,8 +99,7 @@
 	"objectTypes": {
 		"items": [
 			"Audio",
-			"Souris",
-			"Toucher"
+			"Souris"
 		],
 		"subfolders": [
 			{
@@ -108,9 +115,23 @@
 			{
 				"items": [
 					"MimiTest1",
-					"MimiTest2",
+					"BobbyMouth",
 					"PlatformInfo",
-					"TextTéléphone"
+					"TextContrainte",
+					"Toucher",
+					"BoutonBobby",
+					"BoutonFred",
+					"TextBoutonBOBBY",
+					"TextBoutonFRED",
+					"TextCountdown",
+					"Keyboard",
+					"BobbyHatLeft",
+					"BobbyEyebrowLeft",
+					"BobbyEyebrowRight",
+					"BobbyEyeLeft",
+					"BobbyEyeRight",
+					"BobbyHatRight",
+					"BobbyNose"
 				],
 				"subfolders": [],
 				"name": "Emilie_assets"
@@ -130,8 +151,9 @@
 			"main",
 			"corentin",
 			"obj",
-			"EmilieMenu",
-			"EmilieScene"
+			"EmilieInGame",
+			"EmilieEND",
+			"EmilieMainMenu"
 		],
 		"subfolders": []
 	},
@@ -139,7 +161,8 @@
 		"items": [
 			"eMain",
 			"eCorentin",
-			"eEmilie"
+			"eEmilieInGame",
+			"eEmilieMainMenu"
 		],
 		"subfolders": []
 	},

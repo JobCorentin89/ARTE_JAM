@@ -1,0 +1,503 @@
+{
+	"name": "eEmilieMainMenu",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "VariableMobileOrPC",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 113472691636155
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "START_MENU",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 910445926983969
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonFred",
+							"sid": 418418498191961,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 821857780648610,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 541289820535440
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-android",
+							"objectClass": "PlatformInfo",
+							"sid": 964394331201128
+						},
+						{
+							"id": "is-on-mobile",
+							"objectClass": "PlatformInfo",
+							"sid": 218895652679728
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 362249517839876,
+							"parameters": {
+								"group-name": "\"START_MOBILE\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 203292345294146,
+							"parameters": {
+								"group-name": "\"START_PC\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 675597082403669,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 874321526836269,
+									"parameters": {
+										"variable": "VariableMobileOrPC",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 887555850682531
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-web-export",
+							"objectClass": "PlatformInfo",
+							"sid": 871271295025802
+						},
+						{
+							"id": "is-nwjs-export",
+							"objectClass": "PlatformInfo",
+							"sid": 881306260855202
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 898941544581010,
+							"parameters": {
+								"group-name": "\"START_PC\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 999958376330179,
+							"parameters": {
+								"group-name": "\"START_MOBILE\"",
+								"state": "deactivated"
+							}
+						}
+					],
+					"sid": 346014747677621,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 229222983635238,
+									"parameters": {
+										"variable": "VariableMobileOrPC",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 648973077228847
+						}
+					],
+					"isOrBlock": true
+				}
+			],
+			"sid": 421390896251453
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "START_PC",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 558496314844605,
+							"parameters": {
+								"object": "BoutonBobby"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 669909599799446,
+							"parameters": {
+								"object": "BoutonFred"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 749773451622040,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 114296791411946,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Souris",
+							"sid": 675596885178796,
+							"parameters": {
+								"cursor-style": "normal"
+							}
+						}
+					],
+					"sid": 216902410414556
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 434783399266520,
+							"parameters": {
+								"object": "BoutonBobby"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 259968003415052,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Souris",
+							"sid": 881046427588418,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						}
+					],
+					"sid": 548282613672427,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Souris",
+									"sid": 151128314548439,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 395788410414844,
+									"parameters": {
+										"layout": "EmilieInGame"
+									}
+								}
+							],
+							"sid": 746300031845330
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Souris",
+							"sid": 484772824495771,
+							"parameters": {
+								"object": "BoutonFred"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonFred",
+							"sid": 715324531643521,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-cursor-style",
+							"objectClass": "Souris",
+							"sid": 321108577866475,
+							"parameters": {
+								"cursor-style": "hand"
+							}
+						}
+					],
+					"sid": 861395978469509,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-button-released",
+									"objectClass": "Souris",
+									"sid": 518457735860360,
+									"parameters": {
+										"mouse-button": "left"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 800902249100723,
+									"parameters": {
+										"layout": "corentin"
+									}
+								}
+							],
+							"sid": 284093496592464
+						}
+					]
+				}
+			],
+			"sid": 238726190131481
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "START_MOBILE",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Toucher",
+							"sid": 148170695514874,
+							"parameters": {
+								"object": "BoutonBobby"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-touching-object",
+							"objectClass": "Toucher",
+							"sid": 183489534444646,
+							"parameters": {
+								"object": "BoutonFred"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 842712252838777,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 624964353463018,
+							"parameters": {
+								"animation": "\"Off\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 548263264990442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Toucher",
+							"sid": 218211948430556,
+							"parameters": {
+								"object": "BoutonBobby"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonBobby",
+							"sid": 375252204662222,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 186190255261789,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Toucher",
+									"sid": 860247061238184,
+									"parameters": {
+										"object": "BoutonBobby"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 902718148491897,
+									"parameters": {
+										"layout": "EmilieInGame"
+									}
+								}
+							],
+							"sid": 881239782864257
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Toucher",
+							"sid": 159257751076122,
+							"parameters": {
+								"object": "BoutonFred"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BoutonFred",
+							"sid": 530079589499955,
+							"parameters": {
+								"animation": "\"On\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 354990278495969,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Toucher",
+									"sid": 520586848816907,
+									"parameters": {
+										"object": "BoutonFred"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 793206746655983,
+									"parameters": {
+										"layout": "corentin"
+									}
+								}
+							],
+							"sid": 416496723763216
+						}
+					]
+				}
+			],
+			"sid": 329300142439533
+		}
+	],
+	"sid": 348976665313039
+}
