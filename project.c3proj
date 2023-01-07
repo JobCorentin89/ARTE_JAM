@@ -32,14 +32,16 @@
 		"items": [
 			"main",
 			"corentin",
-			"obj"
+			"obj",
+			"Emilie"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"eMain",
-			"eCorentin"
+			"eCorentin",
+			"eEmilie"
 		],
 		"subfolders": []
 	},
