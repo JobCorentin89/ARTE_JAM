@@ -16,6 +16,17 @@
 		},
 		{
 			"type": "plugin",
+<<<<<<< HEAD
+=======
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+>>>>>>> Mimilie
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
@@ -23,6 +34,7 @@
 			"bundled": false
 		},
 		{
+<<<<<<< HEAD
 			"type": "plugin",
 			"id": "Mouse",
 			"name": "Souris",
@@ -42,6 +54,11 @@
 			"type": "effect",
 			"id": "skymen_BetterOutline",
 			"name": "[BetterOutline]",
+=======
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "BetterOutline",
+>>>>>>> Mimilie
 			"author": "skymen",
 			"version": "1.4.0.3",
 			"bundled": false
@@ -56,10 +73,18 @@
 		"subfolders": [
 			{
 				"items": [
+<<<<<<< HEAD
 					"obj_dragObject"
 				],
 				"subfolders": [],
 				"name": "Corentin_assets"
+=======
+					"Sprite",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "EmilieAssets"
+>>>>>>> Mimilie
 			}
 		]
 	},
