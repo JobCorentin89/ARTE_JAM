@@ -72,7 +72,9 @@
 				"name": "Corentin_assets"
 			},
 			{
-				"items": [],
+				"items": [
+					"Sprite"
+				],
 				"subfolders": [],
 				"name": "Emilie_assets"
 			}
