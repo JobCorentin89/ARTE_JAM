@@ -1,5 +1,5 @@
 {
-	"name": "Scène 1",
+	"name": "main",
 	"layers": [
 		{
 			"name": "Calque 0",
@@ -44,5 +44,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Feuille d'Evènements 1"
+	"eventSheet": "eMain"
 }

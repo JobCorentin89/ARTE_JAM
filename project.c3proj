@@ -5,10 +5,21 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		}
+	],
 	"uniqueId": "c0dmhcqbant",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Audio"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -19,13 +30,16 @@
 	},
 	"layouts": {
 		"items": [
-			"Scène 1"
+			"main",
+			"corentin",
+			"obj"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Feuille d'Evènements 1"
+			"eMain",
+			"eCorentin"
 		],
 		"subfolders": []
 	},

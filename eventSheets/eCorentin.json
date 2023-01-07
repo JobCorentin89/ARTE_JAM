@@ -1,0 +1,15 @@
+{
+	"name": "eCorentin",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "eCorentin",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 599310717076584
+		}
+	],
+	"sid": 537154939934393
+}
