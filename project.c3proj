@@ -8,10 +8,34 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
 			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "BetterOutline",
+			"author": "skymen",
+			"version": "1.4.0.3",
 			"bundled": false
 		}
 	],
@@ -20,7 +44,16 @@
 		"items": [
 			"Audio"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Sprite",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "EmilieAssets"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
