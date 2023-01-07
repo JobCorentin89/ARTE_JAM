@@ -159,9 +159,7 @@
 		"items": [
 			"main",
 			"corentin",
-			"obj",
-			"EmilieMenu",
-			"EmilieScene"
+			"obj"
 		],
 		"subfolders": []
 	},
