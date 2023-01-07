@@ -16,6 +16,22 @@
 		},
 		{
 			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
@@ -74,8 +90,10 @@
 			},
 			{
 				"items": [
-					"Sprite",
-					"Sprite2"
+					"MimiTest1",
+					"MimiTest2",
+					"PlatformInfo",
+					"TextTéléphone"
 				],
 				"subfolders": [],
 				"name": "Emilie_assets"
@@ -95,7 +113,8 @@
 			"main",
 			"corentin",
 			"obj",
-			"Emilie"
+			"EmilieMenu",
+			"EmilieScene"
 		],
 		"subfolders": []
 	},
@@ -206,12 +225,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "Miroir",
 		"version": "1.0.0.0",
 		"author": "",
 		"authorEmail": "",
 		"authorWebsite": "",
-		"appId": "",
+		"appId": "com.pepiteam.artejam",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,

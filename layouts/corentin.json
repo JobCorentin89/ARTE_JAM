@@ -88,7 +88,7 @@
 					}
 				},
 				{
-					"type": "Sprite",
+					"type": "MimiTest1",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -98,7 +98,30 @@
 					},
 					"uid": 7,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						}
+					},
+					"effects": {
+						"BetterOutline": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"width": 1,
+								"precision-step": 1,
+								"samples": 16
+							}
+						}
+					},
 					"world": {
 						"x": 576,
 						"y": 222,
@@ -125,7 +148,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 8,
+					"uid": 9,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
