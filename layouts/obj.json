@@ -5,7 +5,73 @@
 			"name": "Calque 0",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "obj_dragObject",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 6,
+					"instanceVariables": {
+						"val_UID": 0,
+						"val_state": 0,
+						"val_originalWidth": 0,
+						"val_originalHeight": 0
+					},
+					"behaviors": {
+						"GlisserDéposer": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"BetterOutline": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"width": 5,
+								"precision-step": 1,
+								"samples": 16
+							}
+						}
+					},
+					"world": {
+						"x": 1157,
+						"y": 549,
+						"width": 473.1555259480856,
+						"height": 254.32109519709604,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 921665577679167,
 			"effectTypes": [],
 			"isInitiallyVisible": true,

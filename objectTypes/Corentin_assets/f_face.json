@@ -1,0 +1,49 @@
+{
+	"name": "f_face",
+	"plugin-id": "Sprite",
+	"sid": 497492858093891,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4916143,
+						"collisionPoly": {
+							"points": [
+								0.15399993896484382,
+								0.13799987792968751,
+								0.858000030517578,
+								0.13200008392333987,
+								0.848000030517578,
+								1,
+								0.14399993896484367,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 186120200591831,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

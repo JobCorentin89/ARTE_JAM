@@ -11,6 +11,281 @@
 				{
 					"eventType": "group",
 					"disabled": false,
+					"title": "Spawn",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "val_spawnID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 833434185298751
+						},
+						{
+							"eventType": "variable",
+							"name": "val_randomLeftOrRight",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 653231463470003
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 889098711737894
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 134251436008553,
+									"parameters": {
+										"variable": "val_spawnID",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 427236417930812,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "repeat",
+											"objectClass": "System",
+											"sid": 364458787636374,
+											"parameters": {
+												"count": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 508356924250495,
+											"parameters": {
+												"variable": "val_spawnID",
+												"value": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 531134828050607,
+											"parameters": {
+												"variable": "val_randomLeftOrRight",
+												"value": "int(random(1,3))"
+											}
+										}
+									],
+									"sid": 450016570512005,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "SPAWN LEFT"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 315597348726154,
+													"parameters": {
+														"first-value": "val_randomLeftOrRight",
+														"comparison": 0,
+														"second-value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 201847145414450,
+													"parameters": {
+														"object-to-create": "fam_object",
+														"layer": "\"Main\"",
+														"x": "random(0, 33 *ViewportWidth(0) / 100)",
+														"y": "random(0, ViewportHeight(0))",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "fam_object",
+													"sid": 647220835433683,
+													"parameters": {
+														"frame-number": "val_spawnID"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "Set original width"
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "fam_object",
+													"sid": 439776669152970,
+													"parameters": {
+														"instance-variable": "val_originalHeight",
+														"value": "Self.Height"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "fam_object",
+													"sid": 887859902411563,
+													"parameters": {
+														"instance-variable": "val_originalWidth",
+														"value": "Self.Width"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "Tween animation"
+												},
+												{
+													"id": "set-size",
+													"objectClass": "fam_object",
+													"sid": 428466566997027,
+													"parameters": {
+														"width": "0",
+														"height": "0"
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "fam_object",
+													"sid": 195362718285827,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "size",
+														"end-x": "Self.val_originalWidth",
+														"end-y": "Self.val_originalHeight",
+														"time": "random(0.4, 0.7)",
+														"ease": "easeoutbounce",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 985796731807828
+										},
+										{
+											"eventType": "comment",
+											"text": "SPAWN RIGHT"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 306130667933589
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 272536703812274,
+													"parameters": {
+														"object-to-create": "fam_object",
+														"layer": "\"Main\"",
+														"x": "random( 66 *ViewportWidth(0) / 100,ViewportWidth(0))",
+														"y": "random(0, ViewportHeight(0))",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation-frame",
+													"objectClass": "fam_object",
+													"sid": 647220835433683,
+													"parameters": {
+														"frame-number": "val_spawnID"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "Set original width"
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "fam_object",
+													"sid": 439776669152970,
+													"parameters": {
+														"instance-variable": "val_originalHeight",
+														"value": "Self.Height"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "fam_object",
+													"sid": 887859902411563,
+													"parameters": {
+														"instance-variable": "val_originalWidth",
+														"value": "Self.Width"
+													}
+												},
+												{
+													"type": "comment",
+													"text": "Tween animation"
+												},
+												{
+													"id": "set-size",
+													"objectClass": "fam_object",
+													"sid": 428466566997027,
+													"parameters": {
+														"width": "0",
+														"height": "0"
+													}
+												},
+												{
+													"id": "tween-two-properties",
+													"objectClass": "fam_object",
+													"sid": 195362718285827,
+													"behaviorType": "Tween",
+													"parameters": {
+														"tags": "\"\"",
+														"property": "size",
+														"end-x": "Self.val_originalWidth",
+														"end-y": "Self.val_originalHeight",
+														"time": "random(0.4, 0.7)",
+														"ease": "easeoutbounce",
+														"destroy-on-complete": "no",
+														"loop": "no",
+														"ping-pong": "no"
+													}
+												}
+											],
+											"sid": 423032924321693
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 778634112046560
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
 					"title": "Drag Objects",
 					"description": "",
 					"isActiveOnStart": true,
@@ -21,42 +296,575 @@
 							"title": "Setup Object",
 							"description": "",
 							"isActiveOnStart": true,
-							"children": [],
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "fam_object",
+											"sid": 652753769865588
+										}
+									],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "SET VALUE"
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "fam_object",
+											"sid": 590338995179767,
+											"parameters": {
+												"instance-variable": "val_UID",
+												"value": "Self.UID"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "fam_object",
+											"sid": 659026902995733,
+											"parameters": {
+												"instance-variable": "val_state",
+												"value": "0"
+											}
+										},
+										{
+											"type": "comment",
+											"text": "SET EFFECT VALUE"
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "fam_object",
+											"sid": 410275407452619,
+											"parameters": {
+												"effect": "\"BetterOutline\"",
+												"parameter-index": "0",
+												"value": "rgbEx(255,255,255)"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "fam_object",
+											"sid": 564824598489979,
+											"parameters": {
+												"effect": "\"BetterOutline\"",
+												"parameter-index": "1",
+												"value": "3"
+											}
+										}
+									],
+									"sid": 375930695885231
+								},
+								{
+									"functionName": "SetOutlineColor",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [
+										{
+											"name": "R",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 923166640633863
+										},
+										{
+											"name": "G",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 645717403232607
+										},
+										{
+											"name": "B",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 189103083744194
+										},
+										{
+											"name": "val_obj_UID",
+											"type": "number",
+											"initialValue": "0",
+											"comment": "",
+											"sid": 633571815736008
+										}
+									],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 505260184931134,
+									"disabled": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "fam_object",
+													"sid": 814751689076652,
+													"parameters": {
+														"instance-variable": "val_UID",
+														"comparison": 0,
+														"value": "val_obj_UID"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-effect-parameter",
+													"objectClass": "fam_object",
+													"sid": 284571022386270,
+													"parameters": {
+														"effect": "\"BetterOutline\"",
+														"parameter-index": "0",
+														"value": "rgbEx(R,G,B)"
+													}
+												}
+											],
+											"sid": 824710635958133,
+											"disabled": true
+										}
+									]
+								}
+							],
 							"sid": 485866336620234
 						},
 						{
-							"eventType": "comment",
-							"text": "ON START DRAG"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
+							"eventType": "group",
+							"disabled": false,
+							"title": "States",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
 								{
-									"id": "on-drag-start",
-									"objectClass": "fam_object",
-									"sid": 298822045764639,
-									"behaviorType": "GlisserDéposer"
+									"eventType": "group",
+									"disabled": false,
+									"title": "Default State",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "fam_object",
+													"sid": 255070582220052,
+													"parameters": {
+														"instance-variable": "val_state",
+														"comparison": 0,
+														"value": "0"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 511831088778910,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "ON START DRAG = Set state to Dragged"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-drag-start",
+															"objectClass": "fam_object",
+															"sid": 986952689022116,
+															"behaviorType": "GlisserDéposer"
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "fam_object",
+															"sid": 387886914043827,
+															"parameters": {
+																"instance-variable": "val_state",
+																"value": "1"
+															}
+														},
+														{
+															"id": "move-to-top",
+															"objectClass": "fam_object",
+															"sid": 457339052560453
+														},
+														{
+															"id": "stop-all-tweens",
+															"objectClass": "fam_object",
+															"sid": 788145147067263,
+															"behaviorType": "Tween"
+														}
+													],
+													"sid": 641384304653175
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "cursor-is-over-object",
+															"objectClass": "Souris",
+															"sid": 551679755827510,
+															"parameters": {
+																"object": "fam_object"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-effect-parameter",
+															"objectClass": "fam_object",
+															"sid": 238046188803529,
+															"parameters": {
+																"effect": "\"BetterOutline\"",
+																"parameter-index": "0",
+																"value": "rgbEx(0,0,0)"
+															}
+														}
+													],
+													"sid": 898178023204719
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "cursor-is-over-object",
+															"objectClass": "Souris",
+															"sid": 631294318842960,
+															"parameters": {
+																"object": "fam_object"
+															},
+															"isInverted": true
+														}
+													],
+													"actions": [
+														{
+															"id": "set-effect-parameter",
+															"objectClass": "fam_object",
+															"sid": 168983828805858,
+															"parameters": {
+																"effect": "\"BetterOutline\"",
+																"parameter-index": "0",
+																"value": "rgbEx(255,255,255)"
+															}
+														}
+													],
+													"sid": 573466212901076
+												}
+											]
+										}
+									],
+									"sid": 255913742263258
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "Dragged State",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "fam_object",
+													"sid": 434674125842190,
+													"parameters": {
+														"instance-variable": "val_state",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 103428383413196,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "is-dragging",
+															"objectClass": "fam_object",
+															"sid": 890860146110580,
+															"behaviorType": "GlisserDéposer"
+														}
+													],
+													"actions": [
+														{
+															"id": "set-effect-parameter",
+															"objectClass": "fam_object",
+															"sid": 268193609409849,
+															"parameters": {
+																"effect": "\"BetterOutline\"",
+																"parameter-index": "0",
+																"value": "rgbEx(255,0,0)"
+															}
+														}
+													],
+													"sid": 631282799365804,
+													"children": [
+														{
+															"eventType": "comment",
+															"text": "ROTATION ON MOUSE WHEEL"
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "on-mouse-wheel",
+																	"objectClass": "Souris",
+																	"sid": 321771744410261,
+																	"parameters": {
+																		"direction": "up"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "rotate-clockwise",
+																	"objectClass": "fam_object",
+																	"sid": 412366342102956,
+																	"parameters": {
+																		"degrees": "15"
+																	}
+																}
+															],
+															"sid": 143097825126902
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "on-mouse-wheel",
+																	"objectClass": "Souris",
+																	"sid": 868663942514203,
+																	"parameters": {
+																		"direction": "down"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "rotate-counter-clockwise",
+																	"objectClass": "fam_object",
+																	"sid": 858319953585103,
+																	"parameters": {
+																		"degrees": "15"
+																	}
+																}
+															],
+															"sid": 792301407039432
+														}
+													]
+												},
+												{
+													"eventType": "comment",
+													"text": "ON STOP DRAG = SET TO DEFAULT STATE"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "on-drop",
+															"objectClass": "fam_object",
+															"sid": 268691582229678,
+															"behaviorType": "GlisserDéposer"
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "fam_object",
+															"sid": 611261121681510,
+															"parameters": {
+																"instance-variable": "val_state",
+																"value": "0"
+															}
+														},
+														{
+															"id": "stop-all-tweens",
+															"objectClass": "fam_object",
+															"sid": 167396435879590,
+															"behaviorType": "Tween"
+														}
+													],
+													"sid": 687893007736430
+												}
+											]
+										}
+									],
+									"sid": 550393963396804
+								},
+								{
+									"eventType": "group",
+									"disabled": false,
+									"title": "DEBUG",
+									"description": "",
+									"isActiveOnStart": true,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-click",
+													"objectClass": "Souris",
+													"sid": 670019732858324,
+													"parameters": {
+														"mouse-button": "right",
+														"click-type": "clicked"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "GravityON",
+													"sid": 536689870488965
+												},
+												{
+													"callFunction": "DestroyNotOnFace",
+													"sid": 867251763791758,
+													"disabled": true
+												}
+											],
+											"sid": 305623803743313
+										},
+										{
+											"functionName": "GravityON",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [],
+											"eventType": "function-block",
+											"conditions": [],
+											"actions": [],
+											"sid": 732437584159927,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 204132451050570,
+															"parameters": {
+																"object": "fam_object"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 441477488083566,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "fam_object",
+																	"sid": 847978302480433,
+																	"parameters": {
+																		"instance-variable": "val_state",
+																		"comparison": 0,
+																		"value": "0"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "stop-all-tweens",
+																	"objectClass": "fam_object",
+																	"sid": 543759807074169,
+																	"behaviorType": "Tween"
+																},
+																{
+																	"id": "tween-two-properties",
+																	"objectClass": "fam_object",
+																	"sid": 908109773400094,
+																	"behaviorType": "Tween",
+																	"parameters": {
+																		"tags": "\"tween_pos\"",
+																		"property": "position",
+																		"end-x": "Self.X",
+																		"end-y": "ViewportBottom(0)",
+																		"time": "2.5",
+																		"ease": "easeoutbounce",
+																		"destroy-on-complete": "no",
+																		"loop": "no",
+																		"ping-pong": "no"
+																	}
+																}
+															],
+															"sid": 494873258411954
+														}
+													]
+												}
+											]
+										},
+										{
+											"functionName": "DestroyNotOnFace",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [],
+											"eventType": "function-block",
+											"conditions": [],
+											"actions": [],
+											"sid": 187376242420146,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "for-each",
+															"objectClass": "System",
+															"sid": 348369464355289,
+															"parameters": {
+																"object": "fam_object"
+															}
+														}
+													],
+													"actions": [],
+													"sid": 474569712136412,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "is-overlapping-another-object",
+																	"objectClass": "fam_object",
+																	"sid": 442199233717917,
+																	"parameters": {
+																		"object": "f_face"
+																	},
+																	"isInverted": true
+																}
+															],
+															"actions": [
+																{
+																	"id": "destroy",
+																	"objectClass": "fam_object",
+																	"sid": 524252532700086
+																}
+															],
+															"sid": 957898237569828
+														}
+													]
+												}
+											]
+										}
+									],
+									"sid": 892413395401764
 								}
 							],
-							"actions": [],
-							"sid": 869532843095552
-						},
-						{
-							"eventType": "comment",
-							"text": "ON DEPOT"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-drop",
-									"objectClass": "fam_object",
-									"sid": 238857613637458,
-									"behaviorType": "GlisserDéposer"
-								}
-							],
-							"actions": [],
-							"sid": 533812914226425
+							"sid": 374874661194167
 						}
 					],
 					"sid": 930280795198531

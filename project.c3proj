@@ -47,6 +47,22 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "skymen_BetterOutline",
 			"name": "BetterOutline",
@@ -67,7 +83,8 @@
 				"items": [
 					"obj_dragObject",
 					"test",
-					"testsprite2"
+					"testsprite2",
+					"f_face"
 				],
 				"subfolders": [],
 				"name": "Corentin_assets"

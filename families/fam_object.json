@@ -2,15 +2,59 @@
 	"name": "fam_object",
 	"plugin-id": "Sprite",
 	"sid": 481332102737307,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "val_UID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 365100635820927
+		},
+		{
+			"name": "val_state",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 612153600339476
+		},
+		{
+			"name": "val_originalWidth",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 980866534725517
+		},
+		{
+			"name": "val_originalHeight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 205540542114559
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "DragnDrop",
 			"name": "GlisserDéposer",
 			"sid": 168054072973267
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 882434028440600
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 738873399375477
 		}
 	],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	],
 	"members": [
 		"obj_dragObject"
 	]
