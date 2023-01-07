@@ -117,7 +117,7 @@
 					}
 				},
 				{
-					"type": "Sprite2",
+					"type": "testsprite2",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
