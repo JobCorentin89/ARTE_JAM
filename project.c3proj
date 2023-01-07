@@ -74,7 +74,8 @@
 			},
 			{
 				"items": [
-					"Sprite"
+					"Sprite",
+					"Sprite2"
 				],
 				"subfolders": [],
 				"name": "Emilie_assets"
