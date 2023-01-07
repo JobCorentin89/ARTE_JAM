@@ -2,10 +2,48 @@
 	"name": "obj",
 	"layers": [
 		{
-			"name": "Calque 0",
+			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
+				{
+					"type": "f_shadowEffect",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {
+						"Timer": {
+							"properties": {}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1012,
+						"y": 443,
+						"width": 246.00000211447443,
+						"height": 244,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.2821570867247525,
+						"zElevation": 0
+					}
+				},
 				{
 					"type": "obj_dragObject",
 					"properties": {
@@ -15,7 +53,7 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 6,
+					"uid": 19,
 					"instanceVariables": {
 						"val_UID": 0,
 						"val_state": 0,
@@ -36,6 +74,14 @@
 						},
 						"Timer": {
 							"properties": {}
+						},
+						"Rotate": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"enabled": false,
+								"live-preview": false
+							}
 						}
 					},
 					"effects": {
@@ -55,10 +101,50 @@
 						}
 					},
 					"world": {
-						"x": 1157,
-						"y": 549,
-						"width": 473.1555259480856,
-						"height": 254.32109519709604,
+						"x": 1772,
+						"y": 288,
+						"width": 284.89840589879583,
+						"height": 155.2828920340728,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.275050835170495,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "f_lampLight",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						},
+						"Tween": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 1511.9153447318408,
+						"y": 607.0846552681592,
+						"width": 427.83068946368184,
+						"height": 427.83068946368184,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -72,7 +158,7 @@
 					}
 				}
 			],
-			"sid": 921665577679167,
+			"sid": 285889168265786,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -83,9 +169,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
+				0.4588235294117647,
+				0.4588235294117647,
+				0.4588235294117647,
 				1
 			],
 			"isTransparent": false,

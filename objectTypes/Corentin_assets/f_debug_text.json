@@ -1,0 +1,14 @@
+{
+	"name": "f_debug_text",
+	"plugin-id": "Text",
+	"sid": 737986473450667,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "skymen_BetterOutline",
+			"name": "BetterOutline"
+		}
+	]
+}

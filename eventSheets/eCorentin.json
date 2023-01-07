@@ -11,7 +11,7 @@
 				{
 					"eventType": "group",
 					"disabled": false,
-					"title": "Spawn",
+					"title": "Spawn All Objects",
 					"description": "",
 					"isActiveOnStart": true,
 					"children": [
@@ -63,9 +63,9 @@
 										{
 											"id": "repeat",
 											"objectClass": "System",
-											"sid": 364458787636374,
+											"sid": 297649959039665,
 											"parameters": {
-												"count": "5"
+												"count": "7"
 											}
 										}
 									],
@@ -334,23 +334,33 @@
 											"text": "SET EFFECT VALUE"
 										},
 										{
-											"id": "set-effect-parameter",
+											"id": "set-effect-enabled",
 											"objectClass": "fam_object",
-											"sid": 410275407452619,
+											"sid": 409228595996932,
 											"parameters": {
-												"effect": "\"BetterOutline\"",
-												"parameter-index": "0",
-												"value": "rgbEx(255,255,255)"
+												"mode": "disable",
+												"effect": "\"BetterOutline\""
 											}
 										},
 										{
 											"id": "set-effect-parameter",
 											"objectClass": "fam_object",
-											"sid": 564824598489979,
+											"sid": 172706748054317,
 											"parameters": {
 												"effect": "\"BetterOutline\"",
 												"parameter-index": "1",
 												"value": "3"
+											}
+										},
+										{
+											"id": "set-effect-parameter",
+											"objectClass": "fam_object",
+											"sid": 687501566412467,
+											"disabled": true,
+											"parameters": {
+												"effect": "\"BetterOutline\"",
+												"parameter-index": "0",
+												"value": "rgbEx(255,255,255)"
 											}
 										}
 									],
@@ -516,9 +526,18 @@
 													],
 													"actions": [
 														{
+															"id": "set-effect-enabled",
+															"objectClass": "fam_object",
+															"sid": 457277363904637,
+															"parameters": {
+																"mode": "enable",
+																"effect": "\"BetterOutline\""
+															}
+														},
+														{
 															"id": "set-effect-parameter",
 															"objectClass": "fam_object",
-															"sid": 238046188803529,
+															"sid": 974896514698047,
 															"parameters": {
 																"effect": "\"BetterOutline\"",
 																"parameter-index": "0",
@@ -543,13 +562,12 @@
 													],
 													"actions": [
 														{
-															"id": "set-effect-parameter",
+															"id": "set-effect-enabled",
 															"objectClass": "fam_object",
-															"sid": 168983828805858,
+															"sid": 716605324668975,
 															"parameters": {
-																"effect": "\"BetterOutline\"",
-																"parameter-index": "0",
-																"value": "rgbEx(255,255,255)"
+																"mode": "disable",
+																"effect": "\"BetterOutline\""
 															}
 														}
 													],
@@ -595,6 +613,15 @@
 														}
 													],
 													"actions": [
+														{
+															"id": "set-effect-enabled",
+															"objectClass": "fam_object",
+															"sid": 809843067168722,
+															"parameters": {
+																"mode": "enable",
+																"effect": "\"BetterOutline\""
+															}
+														},
 														{
 															"id": "set-effect-parameter",
 															"objectClass": "fam_object",
@@ -699,175 +726,1001 @@
 										}
 									],
 									"sid": 550393963396804
-								},
-								{
-									"eventType": "group",
-									"disabled": false,
-									"title": "DEBUG",
-									"description": "",
-									"isActiveOnStart": true,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-click",
-													"objectClass": "Souris",
-													"sid": 670019732858324,
-													"parameters": {
-														"mouse-button": "right",
-														"click-type": "clicked"
-													}
-												}
-											],
-											"actions": [
-												{
-													"callFunction": "GravityON",
-													"sid": 536689870488965
-												},
-												{
-													"callFunction": "DestroyNotOnFace",
-													"sid": 867251763791758,
-													"disabled": true
-												}
-											],
-											"sid": 305623803743313
-										},
-										{
-											"functionName": "GravityON",
-											"functionDescription": "",
-											"functionCategory": "",
-											"functionReturnType": "none",
-											"functionCopyPicked": false,
-											"functionIsAsync": false,
-											"functionParameters": [],
-											"eventType": "function-block",
-											"conditions": [],
-											"actions": [],
-											"sid": 732437584159927,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 204132451050570,
-															"parameters": {
-																"object": "fam_object"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 441477488083566,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "compare-instance-variable",
-																	"objectClass": "fam_object",
-																	"sid": 847978302480433,
-																	"parameters": {
-																		"instance-variable": "val_state",
-																		"comparison": 0,
-																		"value": "0"
-																	}
-																}
-															],
-															"actions": [
-																{
-																	"id": "stop-all-tweens",
-																	"objectClass": "fam_object",
-																	"sid": 543759807074169,
-																	"behaviorType": "Tween"
-																},
-																{
-																	"id": "tween-two-properties",
-																	"objectClass": "fam_object",
-																	"sid": 908109773400094,
-																	"behaviorType": "Tween",
-																	"parameters": {
-																		"tags": "\"tween_pos\"",
-																		"property": "position",
-																		"end-x": "Self.X",
-																		"end-y": "ViewportBottom(0)",
-																		"time": "2.5",
-																		"ease": "easeoutbounce",
-																		"destroy-on-complete": "no",
-																		"loop": "no",
-																		"ping-pong": "no"
-																	}
-																}
-															],
-															"sid": 494873258411954
-														}
-													]
-												}
-											]
-										},
-										{
-											"functionName": "DestroyNotOnFace",
-											"functionDescription": "",
-											"functionCategory": "",
-											"functionReturnType": "none",
-											"functionCopyPicked": false,
-											"functionIsAsync": false,
-											"functionParameters": [],
-											"eventType": "function-block",
-											"conditions": [],
-											"actions": [],
-											"sid": 187376242420146,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "for-each",
-															"objectClass": "System",
-															"sid": 348369464355289,
-															"parameters": {
-																"object": "fam_object"
-															}
-														}
-													],
-													"actions": [],
-													"sid": 474569712136412,
-													"children": [
-														{
-															"eventType": "block",
-															"conditions": [
-																{
-																	"id": "is-overlapping-another-object",
-																	"objectClass": "fam_object",
-																	"sid": 442199233717917,
-																	"parameters": {
-																		"object": "f_face"
-																	},
-																	"isInverted": true
-																}
-															],
-															"actions": [
-																{
-																	"id": "destroy",
-																	"objectClass": "fam_object",
-																	"sid": 524252532700086
-																}
-															],
-															"sid": 957898237569828
-														}
-													]
-												}
-											]
-										}
-									],
-									"sid": 892413395401764
 								}
 							],
 							"sid": 374874661194167
 						}
 					],
 					"sid": 930280795198531
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Random Event",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "local_val_currentEvent",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"isStatic": true,
+							"isConstant": false,
+							"sid": 616953469990503
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 330759719980943
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "//START RANDOM EVENT TIMER"
+								},
+								{
+									"id": "start-timer",
+									"objectClass": "f_eventManager",
+									"sid": 663818190587261,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "int(random(8,12))",
+										"type": "once",
+										"tag": "\"timer_newEventFred\""
+									}
+								},
+								{
+									"type": "comment",
+									"text": "SET PROBA TABLE"
+								},
+								{
+									"id": "createProbabilityTable",
+									"objectClass": "AdvancedRandom",
+									"sid": 946032174131430,
+									"parameters": {
+										"name": "\"randomEvent_Fred\""
+									}
+								},
+								{
+									"id": "setProbabilityTable",
+									"objectClass": "AdvancedRandom",
+									"sid": 941714817983939,
+									"parameters": {
+										"name": "\"randomEvent_Fred\""
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 620979607650241,
+									"parameters": {
+										"value": "1",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 503565955236047,
+									"parameters": {
+										"value": "2",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 153961110667890,
+									"parameters": {
+										"value": "3",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 340577451045439,
+									"parameters": {
+										"value": "4",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 394706532508773,
+									"parameters": {
+										"value": "5",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 983851853993346,
+									"parameters": {
+										"value": "6",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 921630202882872,
+									"parameters": {
+										"value": "7",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 953225002052887,
+									"parameters": {
+										"value": "8",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 696107987279891,
+									"parameters": {
+										"value": "9",
+										"weight": "1"
+									}
+								},
+								{
+									"id": "addProbabilityEntry",
+									"objectClass": "AdvancedRandom",
+									"sid": 740009205598056,
+									"parameters": {
+										"value": "10",
+										"weight": "1"
+									}
+								}
+							],
+							"sid": 173302620616163
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"functionName": "randomEventFred",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 314256229567194,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": ""
+								},
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 447737929089258,
+											"parameters": {
+												"variable": "local_val_currentEvent",
+												"value": "AdvancedRandom.Weighted"
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "f_debug_text",
+											"sid": 513949614401945,
+											"parameters": {
+												"text": "local_val_currentEvent"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "f_eventManager",
+											"sid": 480164137432291,
+											"parameters": {
+												"instance-variable": "val_currentEvent",
+												"value": "local_val_currentEvent"
+											}
+										}
+									],
+									"sid": 440641216016652,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "f_eventManager",
+													"sid": 362348348388409,
+													"parameters": {
+														"instance-variable": "val_currentEvent",
+														"comparison": 0,
+														"value": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "f_debug_text",
+													"sid": 258284972654582,
+													"parameters": {
+														"text": "\"Gravity1\""
+													}
+												}
+											],
+											"sid": 784251155786559
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 598878188523150
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "f_eventManager",
+													"sid": 759384435702266,
+													"parameters": {
+														"instance-variable": "val_currentEvent",
+														"comparison": 0,
+														"value": "2"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "f_debug_text",
+													"sid": 362348620464496,
+													"parameters": {
+														"text": "\"2\""
+													}
+												}
+											],
+											"sid": 246804209418860
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 661031394293398
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "f_eventManager",
+													"sid": 448330873399595,
+													"parameters": {
+														"instance-variable": "val_currentEvent",
+														"comparison": 0,
+														"value": "3"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "f_debug_text",
+													"sid": 537314438812368,
+													"parameters": {
+														"text": "\"Gravity3\""
+													}
+												}
+											],
+											"sid": 553449542227613
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 742048018272008
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "f_eventManager",
+													"sid": 224429169997802,
+													"parameters": {
+														"instance-variable": "val_currentEvent",
+														"comparison": 0,
+														"value": "4"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "f_debug_text",
+													"sid": 437983247382528,
+													"parameters": {
+														"text": "\"4\""
+													}
+												}
+											],
+											"sid": 718216015196966
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "else",
+													"objectClass": "System",
+													"sid": 597054861787835
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "f_eventManager",
+													"sid": 405894145092966,
+													"parameters": {
+														"instance-variable": "val_currentEvent",
+														"comparison": 0,
+														"value": "5"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-text",
+													"objectClass": "f_debug_text",
+													"sid": 945580964629070,
+													"parameters": {
+														"text": "\"Gravity5\""
+													}
+												}
+											],
+											"sid": 680065790294785
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "ON TIMER EVENT"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-timer",
+									"objectClass": "f_eventManager",
+									"sid": 267196586185398,
+									"behaviorType": "Timer",
+									"parameters": {
+										"tag": "\"timer_newEventFred\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "start-timer",
+									"objectClass": "f_eventManager",
+									"sid": 212845986923229,
+									"behaviorType": "Timer",
+									"parameters": {
+										"duration": "random(8,12)",
+										"type": "once",
+										"tag": "\"timer_newEventFred\""
+									}
+								},
+								{
+									"callFunction": "randomEventFred",
+									"sid": 359425578580136
+								}
+							],
+							"sid": 718507051612329
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "EVENT 1 FRED - GRAVITY",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "variable",
+									"name": "local_val_gravityInt",
+									"type": "number",
+									"initialValue": "0",
+									"comment": "",
+									"isStatic": true,
+									"isConstant": false,
+									"sid": 257090016133043
+								},
+								{
+									"functionName": "Event1_Gravity",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 709992915588725,
+											"parameters": {
+												"variable": "local_val_gravityInt",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 632160612237594,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "repeat",
+													"objectClass": "System",
+													"sid": 443438445274441,
+													"parameters": {
+														"count": "20"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-eventvar",
+													"objectClass": "System",
+													"sid": 686122608577911,
+													"parameters": {
+														"variable": "local_val_gravityInt",
+														"value": "int(random(-1,2))"
+													}
+												}
+											],
+											"sid": 476910512829007,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "fam_object",
+															"sid": 812571413226484,
+															"parameters": {
+																"instance-variable": "val_state",
+																"comparison": 0,
+																"value": "0"
+															}
+														},
+														{
+															"id": "compare-animation-frame",
+															"objectClass": "fam_object",
+															"sid": 526493341269891,
+															"parameters": {
+																"comparison": 0,
+																"number": "local_val_gravityInt"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "stop-all-tweens",
+															"objectClass": "fam_object",
+															"sid": 315655471687796,
+															"behaviorType": "Tween"
+														},
+														{
+															"id": "tween-two-properties",
+															"objectClass": "fam_object",
+															"sid": 909593790810644,
+															"behaviorType": "Tween",
+															"parameters": {
+																"tags": "\"tween_pos\"",
+																"property": "position",
+																"end-x": "Self.X",
+																"end-y": "ViewportBottom(0)",
+																"time": "2.5",
+																"ease": "easeoutbounce",
+																"destroy-on-complete": "no",
+																"loop": "no",
+																"ping-pong": "no"
+															}
+														}
+													],
+													"sid": 807292050660405
+												}
+											]
+										}
+									]
+								}
+							],
+							"sid": 952636093659850
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "EVENT 2 FRED - SHADOW",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-start-of-layout",
+											"objectClass": "System",
+											"sid": 713499080069034
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 820107847975638,
+											"parameters": {
+												"object-to-create": "f_lampLight",
+												"layer": "\"Effect_Shadow\"",
+												"x": "Souris.X",
+												"y": "Souris.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "f_lampLight",
+											"sid": 785307290725073,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-blend-mode",
+											"objectClass": "f_lampLight",
+											"sid": 807554514001315,
+											"parameters": {
+												"blend-mode": "destination-out"
+											}
+										},
+										{
+											"id": "tween-two-properties",
+											"objectClass": "f_lampLight",
+											"sid": 902747001254818,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"tween_size\"",
+												"property": "size",
+												"end-x": "Self.Width * 1.2",
+												"end-y": "Self.Height * 1.2",
+												"time": "1.5",
+												"ease": "easeinoutquad",
+												"destroy-on-complete": "no",
+												"loop": "yes",
+												"ping-pong": "yes"
+											}
+										}
+									],
+									"sid": 308579336449747
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "every-tick",
+											"objectClass": "System",
+											"sid": 624071259175636
+										}
+									],
+									"actions": [
+										{
+											"id": "set-position",
+											"objectClass": "f_lampLight",
+											"sid": 743165887907600,
+											"parameters": {
+												"x": "Souris.X",
+												"y": "Souris.Y"
+											}
+										}
+									],
+									"sid": 740720566957169
+								},
+								{
+									"functionName": "Event2_Shadow",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [
+										{
+											"type": "comment",
+											"text": "PLAY SFX"
+										},
+										{
+											"callFunction": "PlaySound",
+											"sid": 364253361048607,
+											"parameters": [
+												"\"lights-out\""
+											]
+										},
+										{
+											"type": "comment",
+											"text": "Create and set shadow"
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 915831184603575,
+											"parameters": {
+												"layer": "\"Effect_Shadow\"",
+												"opacity": "99"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 529768114365039,
+											"parameters": {
+												"seconds": "0.3"
+											}
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 994317892004062,
+											"parameters": {
+												"layer": "\"Effect_Shadow\"",
+												"opacity": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 950508926756060,
+											"parameters": {
+												"seconds": "0.3"
+											}
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 803428246101580,
+											"parameters": {
+												"layer": "\"Effect_Shadow\"",
+												"opacity": "99"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 561573731194060,
+											"parameters": {
+												"seconds": "0.3"
+											}
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 161765190631144,
+											"parameters": {
+												"layer": "\"Effect_Shadow\"",
+												"opacity": "0"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 331224116162139,
+											"parameters": {
+												"seconds": "0.3"
+											}
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 263922485520617,
+											"parameters": {
+												"layer": "\"Effect_Shadow\"",
+												"opacity": "99"
+											}
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 921982207440915,
+											"parameters": {
+												"seconds": "0.5"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "f_lampLight",
+											"sid": 546679187008246,
+											"parameters": {
+												"visibility": "visible"
+											}
+										},
+										{
+											"type": "comment",
+											"text": "PLAY SFX"
+										},
+										{
+											"callFunction": "PlaySound",
+											"sid": 372399994328175,
+											"parameters": [
+												"\"allumette\""
+											]
+										},
+										{
+											"type": "comment",
+											"text": "END MALUS"
+										},
+										{
+											"id": "wait",
+											"objectClass": "System",
+											"sid": 293658580762557,
+											"parameters": {
+												"seconds": "6"
+											}
+										},
+										{
+											"id": "set-visible",
+											"objectClass": "f_lampLight",
+											"sid": 183298780586094,
+											"parameters": {
+												"visibility": "invisible"
+											}
+										},
+										{
+											"id": "set-layer-opacity",
+											"objectClass": "System",
+											"sid": 668120555735334,
+											"parameters": {
+												"layer": "\"Effect_Shadow\"",
+												"opacity": "0"
+											}
+										}
+									],
+									"sid": 948302972463942
+								}
+							],
+							"sid": 158156629648727
+						},
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "EVENT 3 FRED - ROTATING OBJECT",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"functionName": "Event3_rotatingObjects",
+									"functionDescription": "",
+									"functionCategory": "",
+									"functionReturnType": "none",
+									"functionCopyPicked": false,
+									"functionIsAsync": false,
+									"functionParameters": [],
+									"eventType": "function-block",
+									"conditions": [],
+									"actions": [],
+									"sid": 653442056773798,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 261765838224615,
+													"parameters": {
+														"object": "fam_object"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-speed",
+													"objectClass": "fam_object",
+													"sid": 529501471084785,
+													"behaviorType": "Rotate",
+													"parameters": {
+														"speed": "random(90,520)"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "fam_object",
+													"sid": 829832651769532,
+													"behaviorType": "Rotate",
+													"parameters": {
+														"state": "enabled"
+													}
+												}
+											],
+											"sid": 540320465757406
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 160113157484469,
+											"parameters": {
+												"object": "fam_object"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 202965133975866,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "cursor-is-over-object",
+													"objectClass": "Souris",
+													"sid": 974260751400200,
+													"parameters": {
+														"object": "fam_object"
+													}
+												},
+												{
+													"id": "is-enabled",
+													"objectClass": "fam_object",
+													"sid": 228345128299032,
+													"behaviorType": "Rotate"
+												}
+											],
+											"actions": [
+												{
+													"id": "set-enabled",
+													"objectClass": "fam_object",
+													"sid": 391057536786369,
+													"behaviorType": "Rotate",
+													"parameters": {
+														"state": "disabled"
+													}
+												}
+											],
+											"sid": 460419192607269
+										}
+									]
+								}
+							],
+							"sid": 335686399743263
+						}
+					],
+					"sid": 483784963272605
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "DEBUG",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Souris",
+									"sid": 180592277039277,
+									"parameters": {
+										"mouse-button": "right",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "DestroyNotOnFace",
+									"sid": 821851703958829,
+									"disabled": true
+								},
+								{
+									"callFunction": "randomEventFred",
+									"sid": 196403090725173,
+									"disabled": true
+								},
+								{
+									"callFunction": "Event2_Shadow",
+									"sid": 144467599956627
+								},
+								{
+									"callFunction": "Event1_Gravity",
+									"sid": 232023144941155,
+									"disabled": true
+								},
+								{
+									"callFunction": "Event3_rotatingObjects",
+									"sid": 855456171193268,
+									"disabled": true
+								}
+							],
+							"sid": 716156646824572
+						},
+						{
+							"functionName": "DestroyNotOnFace",
+							"functionDescription": "",
+							"functionCategory": "",
+							"functionReturnType": "none",
+							"functionCopyPicked": false,
+							"functionIsAsync": false,
+							"functionParameters": [],
+							"eventType": "function-block",
+							"conditions": [],
+							"actions": [],
+							"sid": 541599214675739,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 962992263124036,
+											"parameters": {
+												"object": "fam_object"
+											}
+										}
+									],
+									"actions": [],
+									"sid": 503454187510651,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "fam_object",
+													"sid": 761363278215452,
+													"parameters": {
+														"object": "f_face"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "fam_object",
+													"sid": 192270722093581
+												}
+											],
+											"sid": 309319581203732
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 270720848674631
 				}
 			],
 			"sid": 599310717076584

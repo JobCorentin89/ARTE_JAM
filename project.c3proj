@@ -16,8 +16,8 @@
 		},
 		{
 			"type": "plugin",
-			"id": "PlatformInfo",
-			"name": "Platform info",
+			"id": "AdvancedRandom",
+			"name": "Advanced Random",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -26,6 +26,14 @@
 			"type": "plugin",
 			"id": "Text",
 			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -56,8 +64,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"id": "Timer",
+			"name": "Timer",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -72,8 +80,24 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Timer",
-			"name": "Timer",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -100,7 +124,13 @@
 					"obj_dragObject",
 					"test",
 					"testsprite2",
-					"f_face"
+					"f_face",
+					"f_eventManager",
+					"AdvancedRandom",
+					"f_debug_text",
+					"f_frame",
+					"f_shadowEffect",
+					"f_lampLight"
 				],
 				"subfolders": [],
 				"name": "Corentin_assets"
@@ -139,7 +169,8 @@
 		"items": [
 			"eMain",
 			"eCorentin",
-			"eEmilie"
+			"eEmilie",
+			"eSound"
 		],
 		"subfolders": []
 	},
@@ -149,7 +180,56 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "lights-out.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 696539823315407,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "allumette.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 110576062316367,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "objet-rotation.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 929186569816083,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "objet-metal-1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 564731585780575,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "objet-metal-2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 245081334464872,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "objet-pickup.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 851002557300190,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

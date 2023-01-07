@@ -1,0 +1,51 @@
+{
+	"name": "eSound",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "eSound",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "PlaySound",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "str_soundName",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 635159275683901
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "play-by-name",
+							"objectClass": "Audio",
+							"sid": 617869094317051,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "str_soundName",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 896204718302619
+				}
+			],
+			"sid": 586947478150308
+		}
+	],
+	"sid": 904631153673373
+}

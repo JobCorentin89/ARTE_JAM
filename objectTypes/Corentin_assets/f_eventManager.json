@@ -1,0 +1,51 @@
+{
+	"name": "f_eventManager",
+	"plugin-id": "Sprite",
+	"sid": 800843782522804,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "val_currentEvent",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 302405511358466
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 775773743498913
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9056184,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 630981770313178,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
