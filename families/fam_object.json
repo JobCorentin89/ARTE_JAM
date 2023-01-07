@@ -1,0 +1,17 @@
+{
+	"name": "fam_object",
+	"plugin-id": "Sprite",
+	"sid": 481332102737307,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "GlisserDéposer",
+			"sid": 168054072973267
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"obj_dragObject"
+	]
+}

@@ -8,24 +8,67 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Audio",
 			"name": "Audio",
 			"author": "Scirra",
 			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Souris",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Glisser déposer",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "skymen_BetterOutline",
+			"name": "[BetterOutline]",
+			"author": "skymen",
+			"version": "1.4.0.3",
 			"bundled": false
 		}
 	],
 	"uniqueId": "c0dmhcqbant",
 	"objectTypes": {
 		"items": [
-			"Audio"
+			"Audio",
+			"Souris"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"obj_dragObject"
+				],
+				"subfolders": [],
+				"name": "Corentin_assets"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"fam_object"
+		],
 		"subfolders": []
 	},
 	"layouts": {

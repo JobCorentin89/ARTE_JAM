@@ -7,7 +7,61 @@
 			"title": "eCorentin",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Drag Objects",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Setup Object",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [],
+							"sid": 485866336620234
+						},
+						{
+							"eventType": "comment",
+							"text": "ON START DRAG"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drag-start",
+									"objectClass": "fam_object",
+									"sid": 298822045764639,
+									"behaviorType": "GlisserDéposer"
+								}
+							],
+							"actions": [],
+							"sid": 869532843095552
+						},
+						{
+							"eventType": "comment",
+							"text": "ON DEPOT"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-drop",
+									"objectClass": "fam_object",
+									"sid": 238857613637458,
+									"behaviorType": "GlisserDéposer"
+								}
+							],
+							"actions": [],
+							"sid": 533812914226425
+						}
+					],
+					"sid": 930280795198531
+				}
+			],
 			"sid": 599310717076584
 		}
 	],
