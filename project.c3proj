@@ -25,7 +25,7 @@
 		{
 			"type": "plugin",
 			"id": "Mouse",
-			"name": "Souris",
+			"name": "Mouse",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -33,7 +33,7 @@
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Toucher",
+			"name": "Touch",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -41,7 +41,7 @@
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Glisser déposer",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
@@ -49,7 +49,7 @@
 		{
 			"type": "effect",
 			"id": "skymen_BetterOutline",
-			"name": "[BetterOutline]",
+			"name": "BetterOutline",
 			"author": "skymen",
 			"version": "1.4.0.3",
 			"bundled": false
@@ -65,7 +65,8 @@
 		"subfolders": [
 			{
 				"items": [
-					"obj_dragObject"
+					"obj_dragObject",
+					"test"
 				],
 				"subfolders": [],
 				"name": "Corentin_assets"
